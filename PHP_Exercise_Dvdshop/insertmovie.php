@@ -15,7 +15,7 @@
         <p>
 
         <label for="dvd_id">รหัสภาพยนตร์</label>
-        <input type="text" name="dvd_id " id="dvd_id ">
+        <input type="text" name="dvd_id" id="dvd_id ">
 
         </p>
 

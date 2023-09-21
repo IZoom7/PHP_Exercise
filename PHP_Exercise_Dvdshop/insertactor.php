@@ -10,11 +10,11 @@
 </head>
 
 <body class="container">
-    <form id="form1" name="form1" method="post" action="insertbiosuccess.php">
+    <form id="form1" name="form1" method="post" action="insertstsuccess.php">
         <p>
 
             <label for="st_id ">รหัสนักแสดง</label>
-            <input type="text" name="st_id " id="st_id ">
+            <input type="text" name="st_id" id="st_id">
 
         </p>
 

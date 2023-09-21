@@ -10,11 +10,11 @@
 </head>
 
 <body class="container">
-    <form id="form1" name="form1" method="post" action="insertbiosuccess.php">
+    <form id="form1" name="form1" method="post" action="insertmembersuccess.php">
         <p>
 
-            <label for="member_id">Member-ID</label>
-            <input type="text" name="member_id" id="member_id">
+            <label for="mem_id">Member-ID</label>
+            <input type="text" name="mem_id" id="mem_id">
 
         </p>
 
@@ -39,6 +39,13 @@
             <label for="mem_address">ที่อยู่</label>
 
             <input type="text" name="mem_address" id="mem_address">
+
+        </p>
+        <p>
+
+            <label for="mem_tel">เบอร์โทรติดต่อ</label>
+
+            <input type="text" name="mem_tel" id="mem_tel">
 
         </p>
         <input type="submit" class="btn btn-success" value="บันทึก">

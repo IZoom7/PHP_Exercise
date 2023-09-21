@@ -28,13 +28,20 @@
                     <th scope="col-4">นามสกุล</th>
                     <th scope="col-4">ที่อยู่</th>
                     <th scope="col-4">เบอร์โทร</th>
+                    
                 </tr>
             </thead>
             <tbody>
                 <?php
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
-                            echo "<tr><td>".$row["member_id "]."</td>"."<td>".$row["mem_name"]." ".$row["mem_lastname"]."</td>"."<td>".$row["mem_address"]."</td>"."<td>".$row["mem_tel"]."</td>"."<td>"."<a class='btn btn-warning' href='editbio.php?sid=".$row["member_id "]."'>Edit</a>"."</td>";
+                            echo "<tr><td>".$row["mem_id"]."</td>".
+                            "<td>".$row["mem_name"]."</td>".
+                            "<td>".$row["mem_lastname"]."</td>".
+                            //"<td>".$row["mem_name"]." ".$row["mem_lastname"]."</td>".
+                            "<td>".$row["mem_address"]."</td>".
+                            "<td>".$row["mem_tel"]."</td>";
+                            //"<td>"."<a class='btn btn-warning' href='editbio.php?sid=".$row["member_id "]."'>Edit</a>"."</td>";
                             echo "</tr>";    
                         }
                     }else {
@@ -46,6 +53,7 @@
         </table>
         <a class="btn btn-success" href='insertmember.php'>Insert Member</a>
         <a class="btn btn-success" href='actormenu.php'>Superstars List</a>
+        <a class="btn btn-success" href='mainmenu.php'>Main Menu</a>
     </div>
 </body>
 

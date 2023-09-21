@@ -34,7 +34,13 @@
                 <?php
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
-                            echo "<tr><td>".$row["dvd_id"]."</td>"."<td>".$row["dvd_name"]." ".$row["dvdmovie_type"]."</td>"."<td>".$row["dvdmovie_yrs"]."</td>"."<td>".$row["dvd_price"]."</td>"."<td>"."<a class='btn btn-warning' href='editbio.php?sid=".$row["dvd_id"]."'>Edit</a>"."</td>";
+                            echo "<tr>
+                            <td>".$row["dvd_id"]."</td>"."
+                            <td>".$row["dvd_name"]."</td>"."
+                            <td>".$row["dvdmovie_type"]."</td>"."
+                            <td>".$row["dvdmovie_yrs"]."</td>"."
+                            <td>".$row["dvd_price"]."</td>";
+
                             echo "</tr>";    
                         }
                     }else {

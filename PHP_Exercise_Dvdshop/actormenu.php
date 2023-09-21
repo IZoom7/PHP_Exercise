@@ -1,6 +1,6 @@
 <?php
     require 'dvdconn.php';
-    $sql = "SELECT * FROM superstars";
+    $sql = "SELECT * FROM superstar";
     $result = $conn->query($sql);
     if(!$result){
         die("Error : ". $conn->$conn_error);
@@ -24,17 +24,23 @@
             <thead>
                 <tr>
                     <th scope="col">SuperStar-ID</th>
-                    <th scope="col-4">ชื่อ-นามสกุล</th>
+                    <th scope="col-4">ชื่อ</th>
+                    <th scope="col-4">นามสกุล</th>
                     <th scope="col-4">เพศ</th>
                     <th scope="col-4">อายุ</th>
-                    <!--<th scope="col-4">Edit</th>-->
+                    
                 </tr>
             </thead>
             <tbody>
                 <?php
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
-                            echo "<tr><td>".$row["st_id "]."</td>"."<td>".$row["st_firstname"]." ".$row["st_lastname"]."</td>"."<td>".$row["st_gender"]."</td>"."<td>".$row["st_age"]."</td>"."<td>"."<a class='btn btn-warning' href='editbio.php?sid=".$row["st_id "]."'>Edit</a>"."</td>";
+                            echo "<tr><td>".$row["st_id"]."</td>".
+                            "<td>".$row["st_firstname"]."</td>".
+                            "<td>".$row["st_lastname"]."</td>".
+                            "<td>".$row["st_gender"]."</td>".
+                            "<td>".$row["st_age"]."</td>";
+                            //"<td>"."<a class='btn btn-warning' href='editbio.php?sid=".$row["st_id "]."'>Edit</a>"."</td>";
                             echo "</tr>";    
                         }
                     }else {
